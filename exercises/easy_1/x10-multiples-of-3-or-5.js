@@ -43,16 +43,12 @@
   --------------------------DATA STRUCTURES------------------------------
   --------------------------ALGORITHM------------------------------------
   - define `multisum` function that takes 1 number parameter
-  - declare a variable `numbers` and initialize it to an empty array
   - declare a variable `sum` and initialize it to 0
   - iterate from 1 to `number`
-    - if value from element in current iteration is 
-      evenly divisible by 3 OR
-      evently divisible by 5 then
-      - save each element to the `numbers` array
-  - iterate through `numbers` array 
-    - reasign sum to itself + the value of the element in the 
-      current iteration i.e. (sum = sum + value).
+    - if iterator value is: 
+      - evenly divisible by 3 OR
+      - evently divisible by 5 then
+      - reasign sum to itself + iterator i.e (sum += iterator).
   - return sum
   --------------------------CODE WITH INTENT-----------------------------
 
@@ -60,18 +56,13 @@
 */
 
 const multisum = (num) => {
-  let numbers = [];
   let sum = 0;
 
   for (let i = 1; i <= num; i += 1) {
     if (i % 3 === 0 || i % 5 == 0) {
-      numbers.push(i);
+      sum += i;
     }
   }
-
-  numbers.forEach((n) => {
-    sum += n;
-  });
 
   return sum;
 };
