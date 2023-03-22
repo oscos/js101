@@ -1,5 +1,5 @@
 /*
-  Created: 03/19/2023
+  Created: 03/21/2023
   Updated:
   Launch School - Intro to Javascript
   JS101-JS119 - Small Problems > Easy 2 > Always Return Negative.' 
@@ -40,7 +40,7 @@
   --------------------------------DATA STRUCTURES-------------------------------
   -----------------------------------ALGORITHM----------------------------------
   - define function `negative` that takes one number parameter `num`
-  - if num < 0 then return num otherwise return num * -1
+  - if num < 0 then return num else return num * -1
   --------------------------CODE WITH INTENT-----------------------------------
 
   **********************************END PEDAC**********************************

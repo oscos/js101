@@ -1,5 +1,5 @@
 /*
-  Created: 03/19/2023
+  Created: 03/21/2023
   Updated:
   Launch School - Intro to Javascript
   JS101-JS119 - Small Problems > Easy 2 > Get Middle Character
