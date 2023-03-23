@@ -50,16 +50,20 @@
   **********************************END PEDAC**********************************
 */
 
-const madlibs = {
+const madlibs = () => {
   let rlSync = require("readline-sync");
-  userNounInput = rlSync.question("");
-  userVerbInput = rlSync.question("");
-  userAdjectiveInput = rlSync.question("");
-  userAdverbInput = rlSync.question("");
+  let noun = rlSync.question("Enter a noun:\n");
+  let verb = rlSync.question("Enter a verb:\n");
+  let adjective = rlSync.question("Enter an adjective:\n");
+  let adverb = rlSync.question("Enter an adverb:\n");
 
-  console.log(`Do you ${verb} your ${adjective noun} quickly\? That\'s hilarious\!`);
-  console.log(`The ${adjective noun} walks ${adverb} over the lazy ${noun}.`);
-  console.log(`The ${noun adverb} walks up ${adjective} Joe's turtle.`);
-}
+  console.log(
+    `Do you ${verb} your ${adjective} ${noun} quickly\? That\'s hilarious\!`
+  );
+  console.log(
+    `The ${adjective} ${noun} walks ${adverb} over the lazy ${noun}.`
+  );
+  console.log(`The ${noun} ${adverb} walks up ${adjective} Joe's turtle.`);
+};
 
 madlibs();
