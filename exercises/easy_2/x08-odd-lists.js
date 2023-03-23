@@ -1,6 +1,6 @@
 /*
   Created: 03/19/2023
-  Updated:
+  Updated: 03/23/2023
   Launch School - Intro to Javascript
   JS101-JS119 - Small Problems > Easy 2 > Odd Lists
 
@@ -47,6 +47,7 @@
   *****************************END PEDAC*********************************
 */
 
+// Solution 1
 const oddities = (arr) => {
   let result = [];
 
@@ -55,6 +56,15 @@ const oddities = (arr) => {
   }
 
   return result;
+};
+
+// Solution 2
+const oddities = (arr) => {
+  return arr.filter((item, index) => {
+    if (index % 2 == 0) {
+      return item;
+    }
+  });
 };
 
 console.log(oddities([2, 3, 4, 5, 6])); // logs [2, 4, 6]
