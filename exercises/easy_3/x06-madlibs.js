@@ -42,6 +42,7 @@
   Do you walk your blue dog quickly? That's hilarious!
   The blue dog walks quickly over the lazy dog.
   The dog quickly walks up blue Joe's turtle.
+  
   --------------------------------DATA STRUCTURES------------------------------
   -----------------------------------ALGORITHM---------------------------------
   -------------------------------CODE WITH INTENT------------------------------

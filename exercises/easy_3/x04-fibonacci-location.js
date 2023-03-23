@@ -68,3 +68,41 @@
 
   **********************************END PEDAC**********************************
 */
+
+// normal fibonacci
+// const findFibonacciIndexByLength = (bigNum) => {
+//   if (bigNum < 2) return bigNum;
+//   // console.log(bigNum);
+
+//   return findFibonacciIndexByLength(bigNum - 2n) + findFibonacciIndexByLength(bigNum - 1n);
+// };
+
+// work in progress
+function findFibonacciIndexByLength(bigNum) {
+  // let num = 0;
+
+  if (bigNum < 2) return bigNum;
+
+  let num =
+    findFibonacciIndexByLength(bigNum - 2n) +
+    findFibonacciIndexByLength(bigNum - 1n);
+  // let text = num.toString();
+  // arr.push(text);
+  // console.log(arr);
+  // if (num.toString().length === bigNum) return num
+  console.log(num);
+  return num;
+
+}
+
+console.log(findFibonacciIndexByLength(2n));
+
+// console.log(findFibonacciIndexByLength(2n)) // === 7n); // 1 1 2 3 5 8 13
+// findFibonacciIndexByLength(3n) === 12n;   // 1 1 2 3 5 8 13 21 34 55 89 144
+// findFibonacciIndexByLength(10n) === 45n;
+// findFibonacciIndexByLength(16n) === 74n;
+// findFibonacciIndexByLength(100n) === 476n;
+// findFibonacciIndexByLength(1000n) === 4782n;
+// findFibonacciIndexByLength(10000n) === 47847n;
+
+// The last example may take a minute or so to run.
