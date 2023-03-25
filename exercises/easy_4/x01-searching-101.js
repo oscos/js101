@@ -71,3 +71,5 @@ const checkforNum = () => {
     }
   }
 };
+
+checkforNum();
