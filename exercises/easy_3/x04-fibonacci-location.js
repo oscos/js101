@@ -77,22 +77,40 @@
 //   return findFibonacciIndexByLength(bigNum - 2n) + findFibonacciIndexByLength(bigNum - 1n);
 // };
 
-// work in progress
-function findFibonacciIndexByLength(bigNum) {
-  // let num = 0;
+function findFibonacciIndexByLength(num) {
+  let arr = [1n, 1n];
+  let arrLength = BigInt(arr.length);
+  let last = arr[arrLength - 1n];
+  let secondToLast = arr[arrLength - 2n];
+  let fib = 0;
 
-  if (bigNum < 2) return bigNum;
+  while (last.toString().length < num) {
+    // console.log(last);
+    fib = last + secondToLast;
+    secondToLast = last;
+    last = fib;
+    arr.push(last);
+  }
 
-  let num =
-    findFibonacciIndexByLength(bigNum - 2n) +
-    findFibonacciIndexByLength(bigNum - 1n);
-  // let text = num.toString();
-  // arr.push(text);
-  // console.log(arr);
-  // if (num.toString().length === bigNum) return num
-  console.log(num);
-  return num;
+  // return arrLength;
+  return BigInt(arr.length);
+}
 
+// LS Solution:
+function findFibonacciIndexByLength(length) {
+  let first = 1n;
+  let second = 1n;
+  let count = 2n;
+  let fibonacci;
+
+  do {
+    fibonacci = first + second;
+    count += 1n;
+    first = second;
+    second = fibonacci;
+  } while (String(fibonacci).length < length);
+
+  return count;
 }
 
 console.log(findFibonacciIndexByLength(2n));
