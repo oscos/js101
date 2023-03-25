@@ -50,6 +50,7 @@
   **********************************END PEDAC**********************************
 */
 
+//
 const checkforNum = () => {
   let arr = [];
   let rlSync = require("readline-sync");
