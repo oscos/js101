@@ -57,7 +57,7 @@ const checkforNum = () => {
   for (let i = 0; i < 5; i += 1) {
     let numInput = rlSync.question("Pick a number?\n");
     if (i < 5) {
-      numbersArr.push(numInput);
+      arr.push(numInput);
     } else {
       if (numbersArr.includes(numInput)) {
         console.log(
