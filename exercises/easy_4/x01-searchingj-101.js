@@ -53,17 +53,21 @@
 const checkforNum = () => {
   let arr = [];
   let rlSync = require("readline-sync");
-  
+
   for (let i = 0; i < 5; i += 1) {
     let numInput = rlSync.question("Pick a number?\n");
     if (i < 5) {
       numbersArr.push(numInput);
     } else {
       if (numbersArr.includes(numInput)) {
-        console.log(`The number ${inputNum} appears in ${arr[0],arr[1],arr[2],arr[3],arr[4].}`);
+        console.log(
+          `The number ${inputNum} appears in ${arr[0]}, ${arr[1]}, ${arr[2]}, ${arr[3]}, ${arr[4]}.`
+        );
       } else {
-        console.log(`The number ${inputNum} does not appear in ${arr[0],arr[1],arr[2],arr[3],arr[4].}.`);
+        console.log(
+          `The number ${inputNum} does not appear in ${arr[0]}, ${arr[1]}, ${arr[2]}, ${arr[3]}, ${arr[4]}.`
+        );
       }
     }
   }
-}
+};
