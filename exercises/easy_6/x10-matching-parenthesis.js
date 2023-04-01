@@ -27,52 +27,57 @@
 
   ---------------------------------MENTAL MODEL--------------------------------
   -----------------------------------EXAMPLES----------------------------------
-  [()]
-  [)]
   --------------------------------DATA STRUCTURES------------------------------
   -----------------------------------ALGORITHM---------------------------------
   - create function `isBalanced` that takes one string parameter'
-  - declare a variable `result` initialized to false
-  - declare a variable `validChars` initialized to ["(",")"]
   - declare variable `arr` initialized to empty array
   - iterate through string
-    - if current element is is either `(` or ')`
+    - if current element is `(`
       - save current element to `arr`
-  - reasign result to true if 
-    - length of arr is even && 
-    - first element in `arr` is `(` && 
-    - last element in `arr` is `)`
-  - else reasign result to true if 
-    - `arr` is empty
-  - return result
+    - else if current element is `)` and `arr` is NOT empty
+      - remove last element in `arr`
+    - else if current element is `)`
+      - save current element to `arr`
+  - return the return value of checking if `arr` is empty
   -------------------------------CODE WITH INTENT------------------------------
   **********************************END PEDAC**********************************
 */
 
 const isBalanced = (str) => {
-  let result = false;
-  let validChars = ["(", ")"];
   const arr = [];
+
   str.split("").forEach((item) => {
-    if (validChars.includes(item)) {
+    if (item === "(") {
+      arr.push(item);
+    } else if (item === ")" && arr.length > 0) {
+      arr.pop();
+    } else if (item === ")") {
       arr.push(item);
     }
   });
 
-  if (arr.length === 0) {
-    result = true;
-  } else if (
-    arr.length % 2 === 0 &&
-    arr[0] === "(" &&
-    arr[arr.length - 1] === ")"
-  ) {
-    result = true;
-  }
-
-  return result;
+  return arr.length === 0;
 };
 
-isBalanced("What (is) this?");
+// LS Solution
+function isBalanced(str) {
+  let count = 0;
+
+  for (let char of str) {
+    if (count < 0) {
+      return false;
+    }
+
+    if (char === "(") {
+      count += 1;
+    }
+    if (char === ")") {
+      count -= 1;
+    }
+  }
+
+  return count === 0;
+}
 
 console.log(isBalanced("What (is) this?") === true);
 console.log(isBalanced("What is) this?") === false);
@@ -82,3 +87,4 @@ console.log(isBalanced("((What)) (is this))?") === false);
 console.log(isBalanced("Hey!") === true);
 console.log(isBalanced(")Hey!(") === false);
 console.log(isBalanced("What ((is))) up(") === false);
+console.log(isBalanced("What ()) (()") === false); // My own test
