@@ -77,19 +77,19 @@ LOWER_LETTERS = [
   "z",
 ];
 
-// // Solution 1:
-// const isUppercase = (str) => {
-//   let result = true;
-//   const lettersArr = str.split("");
-//   lettersArr.forEach((item) => {
-//     if (LOWER_LETTERS.includes(item)) {
-//       result = false;
-//     }
-//   });
+// Solution 1:
+const isUppercase = (str) => {
+  let result = true;
+  const lettersArr = str.split("");
+  lettersArr.forEach((item) => {
+    if (LOWER_LETTERS.includes(item)) {
+      result = false;
+    }
+  });
 
-//   console.log(result);
-//   return result;
-// };
+  //console.log(result);
+  return result;
+};
 
 // Solution 2: More efficient as it stops iterating after first false
 const isUppercase = (str) => {
@@ -99,8 +99,6 @@ const isUppercase = (str) => {
 
   return true;
 };
-
-isUppercase("4SCORE!");
 
 // console.log(isUppercase("t")); // false
 // console.log(isUppercase("T")); // true
