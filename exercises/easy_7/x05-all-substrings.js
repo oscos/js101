@@ -38,7 +38,7 @@
   **********************************END PEDAC**********************************
 */
 
-// Solution from Previous exercise
+// Helper method from previous exercise
 const leadingSubstrings = (str) => {
   let result = [];
   const arr = str.split("").forEach((item, index) => {
@@ -47,8 +47,8 @@ const leadingSubstrings = (str) => {
     result.push(acc);
   });
 
-  // Not needed in this solution
-  // result = result.sort((a, b) => a.length - b.length);
+  // Not needed in this solution but perhaps in others.
+  result = result.sort((a, b) => a.length - b.length);
 
   // console.log(result);
   return result;

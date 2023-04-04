@@ -62,8 +62,8 @@ const leadingSubstrings = (str) => {
     result.push(acc);
   });
 
-  // Not needed in this solution
-  // result = result.sort((a, b) => a.length - b.length);
+  // Not needed in this solution, but pehaps in others.
+  result = result.sort((a, b) => a.length - b.length);
 
   console.log(result);
   return result;
