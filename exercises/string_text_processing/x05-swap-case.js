@@ -48,3 +48,20 @@ const swapCase = (str) => {
 
 swapCase("CamelCase"); // "cAMELcASE"
 swapCase("Tonight on XYZ-TV"); // "tONIGHT ON xyz-tv"
+
+// Soltion 2
+const swapCase2 = (str) => {
+  let result = str
+    .split("")
+    .map((char) => {
+      return char.toUpperCase() === char
+        ? char.toLowerCase()
+        : char.toUpperCase();
+    })
+    .join("");
+  console.log(result);
+  return result;
+};
+
+swapCase2("CamelCase"); // "cAMELcASE"
+swapCase2("Tonight on XYZ-TV"); // "tONIGHT ON xyz-tv"
