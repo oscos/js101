@@ -34,7 +34,7 @@ const searchWord = (word, str) => {
   const result = str
     .split(" ")
     .map((item) => {
-      if (item.toLowerCase() === word.toLowerCase()) {
+      if (item.toLowerCase() === word) {
         return `**${item.toUpperCase()}**`;
       } else {
         return item;
