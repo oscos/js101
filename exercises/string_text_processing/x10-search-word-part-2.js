@@ -31,7 +31,6 @@
 
 // Solution 1:
 const searchWord = (word, str) => {
-  const regex = new RegExp(`${word}`, "gi");
   const result = str
     .split(" ")
     .map((item) => {
