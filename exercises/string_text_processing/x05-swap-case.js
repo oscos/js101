@@ -34,5 +34,17 @@
   **********************************END PEDAC**********************************
 */
 
+const swapCase = (str) => {
+  let result = str.split("").map((char) => {
+    if (char.toUpperCase() === char) {
+      return char.toLowerCase();
+    } else {
+      return char.toUpperCase();
+    }
+  });
+  console.log(result.join(""));
+  return result.join("");
+};
+
 swapCase("CamelCase"); // "cAMELcASE"
 swapCase("Tonight on XYZ-TV"); // "tONIGHT ON xyz-tv"
