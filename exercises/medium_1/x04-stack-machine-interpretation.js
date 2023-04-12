@@ -69,10 +69,6 @@ const minilang = (str) => {
   });
 };
 
-minilang("3 PUSH PUSH 7 DIV MULT PRINT");
-// 6
-
-/*
 minilang("PRINT");
 // 0
 
@@ -102,7 +98,5 @@ minilang("4 PUSH PUSH 7 REMAINDER MULT PRINT");
 minilang("-3 PUSH 5 SUB PRINT");
 // 8
 
-console.log(minilang("6 PUSH"));
+minilang("6 PUSH");
 // (nothing is printed because the `program` argument has no `PRINT` commands)
-
-*/
