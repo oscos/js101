@@ -50,8 +50,8 @@ const findFibonacciIndexByLength = (num) => {
 
   while (arr.slice(-1).toString().length < num) {
     // sum of the last two elements of array
-    fib = arr.slice(-2).reduce((acc, sum) => acc + sum, 0n);
-    arr.push(fib);
+    sumOfLastTwo = arr.slice(-2).reduce((acc, sum) => acc + sum, 0n);
+    arr.push(sumOfLastTwo);
   }
 
   result = BigInt(arr.length);
