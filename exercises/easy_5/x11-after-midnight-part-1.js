@@ -68,6 +68,29 @@ const timeOfDay = (num) => {
   return `${formatNum(hours)}:${formatNum(minutes)}`;
 };
 
+// additional solution added 05/02/2023 after reviewing other student solutions
+
+const MINUTES_PER_HOUR = 60;
+const HOURS_PER_DAY = 24;
+const MINUTES_PER_DAY = HOURS_PER_DAY * MINUTES_PER_HOUR;
+
+function formatNum(num) {
+  return num < 10 ? `0${num}` : num;
+}
+
+function timeOfDay(num) {
+  if (num < 0) {
+    num = (num % MINUTES_PER_DAY) + MINUTES_PER_DAY;
+  } else {
+    num = num % MINUTES_PER_DAY;
+  }
+
+  let hours = Math.floor(num / MINUTES_PER_HOUR);
+  let minutes = num % MINUTES_PER_HOUR;
+
+  return `${formatNum(hours)}:${formatNum(minutes)}`;
+}
+
 console.log(timeOfDay(0) === "00:00");
 console.log(timeOfDay(-3) === "23:57");
 console.log(timeOfDay(35) === "00:35");
